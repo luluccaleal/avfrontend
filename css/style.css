@@ -1,13 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
+/*Reset*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.red {
-    color: red;
-    font-family: "Rock Salt", cursive;
-    
+/*Header-Cabeçalho*/
+
+.main-header {
+    background-image:url(background-image.png);
+    background-position:50% 39%;
+    display: flex; /*Coloca os elementos centralizados*/
+    flex-direction: column; /* alinha os elementos em baixo do outro*/
+    align-items: center; /*centraliza os elementos*/
+}
+
+.main-nav {
+    width: 100%; /*Ocupa toda area possivel*/
+    max-width: 600px; /*trava a largura maxima para definir o objeto*/
+    padding: 0 16px; /*primeiro é cima e baixo, segundo é esquerda e direita*/ 
+}
+
+.header-list-container {
+    display: flex; /*Coloca os elementos na mesma linha*/
+    justify-content: space-between; /*Adciona espaçamento entre os itens*/
+    align-items: center; /*garantir que fiquem alinhados na mesma linha*/
+    padding: 16px 0; /*primeiro é cima e baixo, segundo é esquerda direita*/ 
+}
+
+.nav-item {
+    list-style-type: none; /*remove as bolinhas padrão dos elementos li*/
+    text-transform: uppercase; /*deixar todas as letras em maiusculo*/
+    color: #00008B;
+}
+
+hr{
+    width: 100%; /*Ocupa toda a area disponivel*/
+}
+
+.nav-item a {
+    text-decoration: none; /*remove o underline do ancora*/
+    color: inherit; /*herda a cor do elemento pai (neste caso é nav-item)*/
+}
+
+.nav-item:hover {
+    color: red; /*quando passar o mouse muda a cor*/
+    transition: 1s;
 }
