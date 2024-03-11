@@ -8,6 +8,20 @@
     box-sizing: border-box;
 }
 
+li{
+    list-style-type: none;/*Retira as bolinhas dos elementos*/
+}
+/*Criação de Variaveis no root do CSS, faz com que na hora q coloca a cor "--blue" ja vai direto pra cor*/
+:root{
+    --blue: #00008B;
+    --Gray: #555555;
+    --Skyblue: #00BFFF;
+    --Sliver: #c0c0c0;
+    --red: #ff0000;
+    --white: #ffffff;
+    --DarkGray: #959595; 
+}
+
 /*Header-Cabeçalho*/
 
 .main-header {
@@ -32,7 +46,6 @@
 }
 
 .nav-item {
-    list-style-type: none; /*remove as bolinhas padrão dos elementos li*/
     text-transform: uppercase; /*deixar todas as letras em maiusculo*/
     color: #00008B;
 }
@@ -51,17 +64,17 @@ hr{
     transition: 1s;
 }
 
-.main-about{
+.main-about {
     padding: 40px 0 64px; /*tres numeros significa o padding em cima ao lado e em baixo*/
 }
 
-.container{
+.container {
     max-width: 600px; /*trava a largura maxima em que definimos para o projeto*/
     padding: 0 16px; /*primeiro cima/baixo, segunda esquerda/direita*/
     margin: 0 auto; /*nao aplica cima/baixo, auto distribui*/
 }
 
-.about-title{
+.about-title {
     font-family: "Raleway", sans-serif; /*pega a fonte importada*/
     font-size: 32px; /*Tamanho da fonte*/
     text-align: center;
@@ -69,9 +82,48 @@ hr{
     margin-bottom: 24px;
 }
 
-.about-image{
+.about-image {
     float: left; /*alinha a imagem esquerda e o texto direita*/
     margin: 0 20px 10px 0; /*0 topo, 20 direta, 10 baixo e 0 esquerda*/
     width: 200px; /*largura*/
     height: auto; /*evita a distorção da imagem*/
+}
+
+.about-description {
+    color: var(--Gray); /*utiliza variavel de cor criado no root*/
+    text-align: justify; /*justifica o texto*/
+}
+
+/*footer*/
+
+.main-footer {
+    background-color: var(--Skyblue); /*aplica cor no fundo do rodapé*/
+    padding: 15px 0; /*aplica espaçamento cima/baixo e nada esquerda/direita*/
+}
+
+.main-footer-container {
+    display: flex; /*deixa tudo na mesma linha*/
+    align-items: center; /*alinha todos os elementos*/
+    justify-content: space-between; /*cola nome de um lado e lista de icones para o outro*/
+}
+.title-smaller {
+    font-family: "Raleway", sans-serif; /*pega a fonte importada*/
+    color: var(--blue); /*utiliza variavel de cor criado no root*/
+    font-size: 26px; /*tamanho da fonte*/
+}
+
+.list-container {
+    display: flex; /*deixa tudo na mesma linha*/
+    align-items: center; /*alinha todos os elementos*/
+    justify-content: space-between; /*cola nome de um lado e lista de icones para o outro*/
+}
+
+.footer-item {
+    width: 50px;
+    height: 50px;
+    padding: 15px 0;
+}
+
+.footer-item + .footer-item {
+    margin-left: 16px; /*aplica na mesma class seguindo em dianre, ate chegar*/
 }
