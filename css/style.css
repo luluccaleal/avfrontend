@@ -3,7 +3,6 @@
 /*Reset*/
 
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -12,6 +11,13 @@ li{
     list-style-type: none;/*Retira as bolinhas dos elementos*/
 }
 /*Criação de Variaveis no root do CSS, faz com que na hora q coloca a cor "--blue" ja vai direto pra cor*/
+
+body {
+    font: 400 22px "Roboto", sans-serif; /*estamos dando peso da fonte para reduzir a barra branca depois do rodapé, peso 400 tamanho 22px */
+}
+
+/*Reset em todos os elementos*/
+
 :root{
     --blue: #00008B;
     --Gray: #555555;
@@ -101,7 +107,7 @@ hr{
     padding: 15px 0; /*aplica espaçamento cima/baixo e nada esquerda/direita*/
 }
 
-.main-footer-container {
+.footer-container {
     display: flex; /*deixa tudo na mesma linha*/
     align-items: center; /*alinha todos os elementos*/
     justify-content: space-between; /*cola nome de um lado e lista de icones para o outro*/
@@ -112,12 +118,6 @@ hr{
     font-size: 26px; /*tamanho da fonte*/
 }
 
-.list-container {
-    display: flex; /*deixa tudo na mesma linha*/
-    align-items: center; /*alinha todos os elementos*/
-    justify-content: space-between; /*cola nome de um lado e lista de icones para o outro*/
-}
-
 .footer-item {
     width: 50px;
     height: 50px;
@@ -126,4 +126,70 @@ hr{
 
 .footer-item + .footer-item {
     margin-left: 16px; /*aplica na mesma class seguindo em dianre, ate chegar*/
+}
+
+/*Contato*/
+
+.contact-text {
+    text-align: center; /*centraliza o texto*/
+    margin-bottom: 30px; /*separa o paragrafo do formulario*/
+    font-size: 28px; /*altera o taemanho da fonte*/
+    color: var(--Gray);
+}
+
+.contact {
+    background-color: var(--Skyblue);
+    padding: 30px; /*espaçamento*/
+    width: 600px; /*tamanho definido para o projeto*/
+    margin-left: auto; /*empurra para a direita*/
+    margin-right: auto; /*empurra para a esquerda*/
+    margin-bottom: 20px;
+}
+
+.contact-label {
+    display: block; /*coloca os elementos um em cima do outro*/
+    margin-bottom: 20px; /*Espaçamento pra baixo*/
+    color: var(--blue);
+}
+
+.contact-field {
+    display: block; /*coloca os elementos um em cima do outro*/
+    width: 100%; /*ocupa o maximo de espaço disponivel*/
+    height: 30px; /*aumenta a altura do campo*/
+    font-size: 16px; /*altera o tamanho do texto*/
+    padding-left: 10px; /*empurra o elemento dentro do campo para esquerda*/
+    border: none; /*tira a borda*/
+}
+
+.contact-field:focus { /*troca a cor do fundo da area do formulario ao clicar*/
+    background-color: var(--Sliver); /*cor do fundo*/
+    outline: none; /*remove a linha interna do campo de formulario*/
+}
+
+textarea.contact-field {
+    height: 150px; /*altera a altura do campo*/
+    padding: 10px;
+    font-family: "Roboto" Calibri;
+}
+
+.button-form {
+    background-color: var(--blue); /*Cor do fundo do botao*/
+    color: var(--white); /*cor da fonte do botao*/
+    border: 2px solid var(--blue); /*adiciona borda ao botao*/
+    border-radius: 10px; /*arredonda a borda do botao*/
+    padding: 2px 6px; /*aumenta o botao 2 pra cima 6 pra esquerda*/
+    font-weight: bold; /*aumenta o peso da fonte deixa ela mais espeça*/
+    cursor: pointer; /*deixa o botao clicavel*/
+}
+
+.button-form:hover {
+    background-color: var(--white); /*cor fundo do botap*/
+    color: var(--blue); /*cor da fonte*/
+}
+
+.contact-maps {
+    width: 600px;
+    margin-left: auto;
+    margin-left: auto;
+    padding-bottom: 20px;
 }
