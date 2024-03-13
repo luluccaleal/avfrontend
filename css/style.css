@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
 
 /*Reset*/
 
@@ -79,6 +79,15 @@ hr{
     padding: 0 16px; /*primeiro cima/baixo, segunda esquerda/direita*/
     margin: 0 auto; /*nao aplica cima/baixo, auto distribui*/
 }
+
+.title-median{
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    height: auto;
+}
+
 
 .about-title {
     font-family: "Raleway", sans-serif; /*pega a fonte importada*/
@@ -188,8 +197,43 @@ textarea.contact-field {
 }
 
 .contact-maps {
-    width: 600px;
-    margin-left: auto;
-    margin-left: auto;
+    width: 600px; /*ocupa o maximo de espaço disponivel*/
+    margin-left: auto; /*empurra para a direita*/
+    margin-right: auto; /*empurra para a direita*/
     padding-bottom: 20px;
+}
+
+/*Pagina home(index)*/
+
+.title-header{
+    font-family: "Madini One", cursive; /*utiliza a fonte importada*/
+    color: var(--blue); /*troca a cor da fonte*/
+    font-size: 38px; /*tamanho da fonte*/
+    padding-bottom: 10px; /*da espaçamento pra baixo*/
+}
+
+.title-large{
+    font-family: "Rock Salt", cursive;
+    color: var(--blue); /*troca a cor da fonte*/
+    font-size: 38px; /*tamanho da fonte*/
+    text-align: center; /*centraliza o texto*/
+}
+
+.description{
+    text-align: center;
+    color: var(--Gray);
+    padding-bottom: 10px;
+}
+
+.emphasis{
+    background-color: var(--Skyblue);
+    color: var(--blue);
+    border-radius: 25px;
+}
+
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
 }
