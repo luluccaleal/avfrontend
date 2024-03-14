@@ -2,22 +2,7 @@
 
 /*Reset*/
 
-* {
-    padding: 0;
-    box-sizing: border-box;
-}
-
-li{
-    list-style-type: none;/*Retira as bolinhas dos elementos*/
-}
 /*Criação de Variaveis no root do CSS, faz com que na hora q coloca a cor "--blue" ja vai direto pra cor*/
-
-body {
-    font: 400 22px "Roboto", sans-serif; /*estamos dando peso da fonte para reduzir a barra branca depois do rodapé, peso 400 tamanho 22px */
-}
-
-/*Reset em todos os elementos*/
-
 :root{
     --blue: #00008B;
     --Gray: #555555;
@@ -26,6 +11,24 @@ body {
     --red: #ff0000;
     --white: #ffffff;
     --DarkGray: #959595; 
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+li{
+    list-style-type: none;/*Retira as bolinhas dos elementos*/
+}
+
+body, button, input {
+    font: 400 22px "Roboto", sans-serif;
+}
+
+body {
+    font: 400 22px "Roboto", sans-serif; /*estamos dando peso da fonte para reduzir a barra branca depois do rodapé, peso 400 tamanho 22px */
 }
 
 /*Header-Cabeçalho*/
@@ -152,13 +155,13 @@ hr{
     width: 600px; /*tamanho definido para o projeto*/
     margin-left: auto; /*empurra para a direita*/
     margin-right: auto; /*empurra para a esquerda*/
-    margin-bottom: 20px;
+    margin-bottom: 20px;  /*separa o paragrafo do formulario*/
 }
 
 .contact-label {
     display: block; /*coloca os elementos um em cima do outro*/
     margin-bottom: 20px; /*Espaçamento pra baixo*/
-    color: var(--blue);
+    color: var(--blue); /*utiliza variavel de cor criado no root*/
 }
 
 .contact-field {
@@ -177,8 +180,8 @@ hr{
 
 textarea.contact-field {
     height: 150px; /*altera a altura do campo*/
-    padding: 10px;
-    font-family: "Roboto" Calibri;
+    padding: 10px; /*espaçamento*/
+    font-family: "Roboto" Calibri; /*pega a fonte importada*/
 }
 
 .button-form {
@@ -200,40 +203,85 @@ textarea.contact-field {
     width: 600px; /*ocupa o maximo de espaço disponivel*/
     margin-left: auto; /*empurra para a direita*/
     margin-right: auto; /*empurra para a direita*/
-    padding-bottom: 20px;
+    padding-bottom: 20px; /*da espaçamento pra baixo*/
 }
 
 /*Pagina home(index)*/
 
-.title-header{
+.title-header {
     font-family: "Madini One", cursive; /*utiliza a fonte importada*/
     color: var(--blue); /*troca a cor da fonte*/
     font-size: 38px; /*tamanho da fonte*/
     padding-bottom: 10px; /*da espaçamento pra baixo*/
 }
 
-.title-large{
+.title-large {
     font-family: "Rock Salt", cursive;
     color: var(--blue); /*troca a cor da fonte*/
     font-size: 38px; /*tamanho da fonte*/
     text-align: center; /*centraliza o texto*/
 }
 
-.description{
-    text-align: center;
-    color: var(--Gray);
-    padding-bottom: 10px;
+.description {
+    text-align: center; /*justifica o texto*/
+    color: var(--Gray); /*troca a cor da fonte*/
+    padding-bottom: 10px; /*da espaçamento pra baixo*/
 }
 
-.emphasis{
-    background-color: var(--Skyblue);
-    color: var(--blue);
-    border-radius: 25px;
+.emphasis {
+    background-color: var(--Skyblue); /*cor fundo*/
+    color: var(--blue); /*troca a cor da fonte*/
+    border-radius: 25px; /*arredonda a borda*/
 }
 
-.product-container{
-    display: flex;
+.product-container {
+    display: flex; /*coloca os elementos um em cima do outro*/
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; /*cola nome de um lado e lista de icones para o outro*/
     gap: 40px;
+    padding: 20px;
+}
+
+.product {
+    display: flex; /*coloca os elementos um em cima do outro*/
+    flex-direction: column; /*ajeita todos na mesma coluna*/
+    align-items: center;
+}
+
+.product-title {
+    font-size: 20px; /*altera o tamanho do texto*/
+    margin-bottom: 6px; /*Espaçamento pra baixo*/
+}
+
+.product-image {
+    width: 320px; /*trava a largura da imagem para colocar dois produtos por linha, pq o espaço do projeto é 600px*/
+    height: 220px; /*trava a altura da imagem*/
+    margin-bottom: 20px; /*aplica um espaço abaixo da imagem*/
+}
+
+.product-price-container{
+    width: 100%; /*ocupa o espaço maximo da tela*/
+    display: flex; /*alinha os elementos na mesma linha*/
+    justify-content: space-between; /*cola nome de um lado e lista de icones para o outro*/
+    align-items: center;
+}
+
+.product-price {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif; /*altera a fonte*/
+    font-weight: bold; /*coloca em negrito*/
+}
+
+.button-hover {
+    background-color: var(--Skyblue); /*cor fundo*/
+    color: var(--blue); /*troca a cor da fonte*/
+    border: 2px solid var(--Skyblue); /*adiciona borda ao botao*/
+    border-radius: 10px; /*arredonda a borda*/
+    padding: 4px 2px; /*espaçamento*/
+    font-weight: bold; /*coloca em negrito*/
+    cursor: pointer; /*deixa o botao clicavel*/
+}
+
+.button-hover:hover {
+    background-color: transparent; /*deixa o fundo botao ao colocar o mouse em cima transparente*/
 }
