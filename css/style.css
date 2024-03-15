@@ -285,3 +285,17 @@ textarea.contact-field {
 .button-hover:hover {
     background-color: transparent; /*deixa o fundo botao ao colocar o mouse em cima transparente*/
 }
+
+/*Carrinho-Loja*/
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse; /*imenda as linhas abaixo das colunas*/
+    padding-bottom: 6px;
+    text-transform: uppercase; /*transforma o texto em maiusculas*/
+}
+
+.table-head-item {
+    text-align: start;
+    border-bottom: 1px solid var(--DarkGray); /*adiciona a linha da borda embaixo*/
+}
