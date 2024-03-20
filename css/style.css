@@ -119,15 +119,22 @@ hr{
     padding: 15px 0; /*aplica espaçamento cima/baixo e nada esquerda/direita*/
 }
 
-.footer-container {
+.main-footer-container {
     display: flex; /*deixa tudo na mesma linha*/
     align-items: center; /*alinha todos os elementos*/
     justify-content: space-between; /*cola nome de um lado e lista de icones para o outro*/
 }
+
 .title-smaller {
     font-family: "Raleway", sans-serif; /*pega a fonte importada*/
     color: var(--blue); /*utiliza variavel de cor criado no root*/
     font-size: 26px; /*tamanho da fonte*/
+}
+
+.list-container {
+    display: flex; /*deixa tudo na mesma linha*/
+    align-items: center; /*alinha todos os elementos*/
+    justify-content: space-between; /*cola nome de um lado e lista de icones para o outro*/
 }
 
 .footer-item {
@@ -375,4 +382,112 @@ textarea.contact-field {
     filter: brightness(0.8);
 }
 
+/*Responsividade*/
 
+@media (max-width: 725px){
+    .main-footer-container{
+    flex-direction: column;
+    }
+
+   .nav-item {
+    font-size: 17px;
+   }
+   
+   .title-large {
+    font-size: 20px;
+    margin: 1px;
+
+   }
+
+   .title-header {
+    font-size: 30px;
+    padding-bottom: 8px;
+   }
+
+   .description {
+    font-size: 21px;
+    padding: 0px 9px;
+    margin-bottom: 20px;
+   }
+
+   .emphasis {
+    font-size: 24px;
+    padding: 1px;
+    margin: 4px;
+   }
+   
+   .main-about {
+    padding: 25px 0 64px;
+   }
+
+   .product-container {
+    padding: 0px;
+   }
+
+   .product-price-container {
+    padding: 6px;
+   }
+
+   .cart-product-image {
+    width: 99px;
+    height: 86px;
+    margin: 1px;
+   }
+    
+   .cart-product-title {
+     margin-left: 5px;
+     font-size: 15px;
+   }
+
+    .cart-product-price {
+     font-size: 20px;
+     margin: 5px;
+    }
+
+    .product-qnt-input {
+     width: 26px;
+     height: 28px;
+     margin: 1px;
+    }
+
+    .remove-product-button {
+     width: 60px;
+     height: 33px;
+     font-size: 13px;
+     margin: -2px;
+    }
+
+    .product-identification {
+     margin-bottom: 9px;
+    }
+    
+    .cart-total-container {
+     padding: 10px 45px 0 0;
+    }
+
+    .table-head-item {
+        font-size: 15px;
+        padding-right: 20px;
+    }
+
+    .title-smaller {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .about-description {
+        font-size: 16px;
+    }
+
+    .contact {
+        padding: 12px;
+    }
+    
+    .contact-text {
+        font-size: 26px;
+    }
+
+    .contact-field {
+        width: 296px;
+    }
+}
