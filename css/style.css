@@ -249,6 +249,13 @@ textarea.contact-field {
     padding: 20px;
 }
 
+.product-containerf1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 32px;
+}
 .product {
     display: flex; /*coloca os elementos um em cima do outro*/
     flex-direction: column; /*ajeita todos na mesma coluna*/
@@ -266,6 +273,18 @@ textarea.contact-field {
     margin-bottom: 20px; /*aplica um espaço abaixo da imagem*/
 }
 
+.product-imagef1 {
+    width: 309px;
+    height: 373px;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-family: "Raleway", cursive;
+}
+
 .product-price-container{
     width: 100%; /*ocupa o espaço maximo da tela*/
     display: flex; /*alinha os elementos na mesma linha*/
@@ -280,6 +299,16 @@ textarea.contact-field {
 }
 
 .button-hover {
+    background-color: var(--Skyblue); /*cor fundo*/
+    color: var(--blue); /*troca a cor da fonte*/
+    border: 2px solid var(--Skyblue); /*adiciona borda ao botao*/
+    border-radius: 10px; /*arredonda a borda*/
+    padding: 4px 2px; /*espaçamento*/
+    font-weight: bold; /*coloca em negrito*/
+    cursor: pointer; /*deixa o botao clicavel*/
+}
+
+.button-hoverf {
     background-color: var(--Skyblue); /*cor fundo*/
     color: var(--blue); /*troca a cor da fonte*/
     border: 2px solid var(--Skyblue); /*adiciona borda ao botao*/
